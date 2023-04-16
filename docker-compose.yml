@@ -1,0 +1,18 @@
+version: '3.4'
+services:
+  stripe:
+    image: springboot-docker-compose-app:1
+    container_name: homeless_stripe
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - /data/homeless_stripe
+    ports:
+      - "8080:8080"
+    networks:
+      - homeless-network
+
+networks:
+  homeless-network:
+    external: true
