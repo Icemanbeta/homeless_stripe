@@ -1,8 +1,8 @@
 version: '3.4'
 services:
   stripe:
-    image: springboot-docker-compose-app:1
-    container_name: homeless_stripe
+    image: homeless-stripe
+    container_name: homeless-stripe
     build:
       context: ./
       dockerfile: Dockerfile
